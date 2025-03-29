@@ -1,0 +1,77 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+	margin: 0;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background-color: #a64254;
+	font-family: "Roboto", sans-serif;
+}
+
+.widget {
+	width: 600px;
+	height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	cursor: pointer;
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.weatherIcon {
+	height: 60%;
+	flex: 1 100%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 100px;
+}
+
+.weatherInfo {
+	height: 40%;
+	background-color: black;
+	color: white;
+	flex: 0 0 60%;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.temp {
+	width: 100%;
+	display: flex;
+	flex: 0 0 40%;
+	justify-content: space-around;
+	font-size: 60px;
+}
+
+.desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 0 0 60%;
+	justify-content: space-around;
+}
+
+.desc span {
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.date {
+	height: 40%;
+	background-color: rgb(148, 180, 117);
+	flex: 0 0 40%;
+	border-bottom-right-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	color: blacks;
+}
