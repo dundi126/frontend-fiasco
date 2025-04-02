@@ -1,0 +1,66 @@
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(5, 22, 20);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-top: 15%;
+}
+
+.list {
+	transform-style: preserve-3d;
+	transition: perspective 0.5s;
+	perspective: 1000px;
+}
+
+.list .items {
+	transition: 0.5s ease-in-out;
+	filter: brightness(0);
+}
+
+.list .items:hover {
+	filter: brightness(1);
+	transform: translateZ(200px);
+}
+
+.list .items:hover + * {
+	filter: brightness(0.6);
+	transform: translateZ(150px) rotateY(40deg);
+}
+
+.list .items:hover + * + * {
+	filter: brightness(0.4);
+	transform: translateZ(100px) rotateY(20deg);
+}
+
+.list .items:hover + * + * + * {
+	filter: brightness(0.2);
+	transform: translateZ(50px) rotateY(10deg);
+}
+
+.list .items:has(+ * :hover) {
+	filter: brightness(0.6);
+	transform: translateZ(150px) rotateY(-40deg);
+}
+
+.list .items:has(+ * + * :hover) {
+	filter: brightness(0.4);
+	transform: translateZ(100px) rotateY(-20deg);
+}
+
+.list .items:has(+ * + * + *:hover) {
+	filter: brightness(0.2);
+	transform: translateZ(50px) rotateY(-10deg);
+}
