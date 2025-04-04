@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+body {
+	border: gray 70px solid;
+	background: url(../../magic-bags/images/mecha_bg.png) no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	font-family: "Cinzel", serif;
+}
+
+header nav h1 {
+	font-size: 50px;
+	text-align: center;
+	padding: 10px;
+}
+
+header nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+}
+
+header nav ul {
+	display: flex;
+	gap: 20px;
+	padding: 20px;
+}
+
+body main {
+	display: flex;
+}
+
+main {
+	display: flex;
+}
+
+main div {
+}
+
+main div h1,
+p {
+	display: flex;
+	flex-direction: column;
+	margin: 40px 20px;
+	color: white;
+}
+
+.mech-image {
+	position: relative;
+	top: -130px;
+	left: calc(35% - 370px);
+	width: 700px;
+	height: 110vh;
+	mask-size: cover;
+}
+
+.mech-selection {
+	position: relative;
+	background: black;
+	height: 55%;
+	border-top-right-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.mech-selection {
+	background: transparent;
+	backdrop-filter: blur(20px);
+	background-image: linear-gradient(
+		(120deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.7))
+	);
+	background-size: 30px;
+}
