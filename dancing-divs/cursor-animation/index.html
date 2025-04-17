@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cursour Animation</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="cursour"></div>
+		<script type="text/javascript">
+			const cursour = document.querySelector(".cursour");
+            var timeout;
+
+			document.addEventListener("mousemove", (e) => {
+				let x = e.pageX;
+				let y = e.pageY;
+
+                cursour.style.left = x + "px";
+                cursour.style.top = y + "px";
+                cursour.style.display = 'block';
+
+                function mouseStop(){
+                    cursour.style.display = 'none';
+                }
+                clearTimeout(timeout);
+                timeout = setTimeout(mouseStop, 1000);
+
+			});
+
+            document.addEventListener('mouseout', () =>{
+                cursour.style.display = 'none';
+            })
+		</script>
+	</body>
+</html>
