@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="main">
+			<div class="wrap">
+				<div class="content">
+					<p>Mythical 1</p>
+					<img src="../../magic-bags/images/mythic/img1.jpg" alt="Mythical 1" />
+				</div>
+			</div>
+
+			<div class="wrap">
+				<div class="content">
+					<p>Mythical 2</p>
+					<img src="../../magic-bags/images/mythic/img2.jpg" alt="Mythical 2" />
+				</div>
+			</div>
+		</section>
+
+		<script>
+			let items = document.querySelectorAll(".content");
+			items.forEach((item) => {
+				item.addEventListener("mousemove", (e) => {
+					let x = e.clientX - item.getBoundingClientRect().left;
+					let y = e.clientY - item.getBoundingClientRect().top;
+
+					let posX = (x / item.offsetWidth) * 100;
+					let posY = (y / item.offsetHeight) * 100;
+
+					item.style.setProperty("--x", 0.5 * (50 - posX) + "deg");
+					item.style.setProperty("--y", 0.5 * (50 - posY) + "deg");
+				});
+			});
+			items.forEach((item) => {
+				item.addEventListener("mouseleave", (e) => {
+					item.style.setProperty("--x", 0 + "deg");
+					item.style.setProperty("--y", 0 + "deg");
+				});
+			});
+		</script>
+	</body>
+</html>
